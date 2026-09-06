@@ -99,14 +99,12 @@
   margin: 0 0 0.85rem;
   font-family: var(--font-brand);
   font-weight: 800;
-  /* 11 букв OPENWIDELLC — влезает на узкий экран */
   font-size: clamp(1.7rem, 8.2vw, 5.6rem);
   letter-spacing: 0.02em;
   line-height: 0.98;
   color: var(--text);
   max-width: 100%;
-  overflow-wrap: anywhere;
-  word-break: break-word;
+  white-space: nowrap;
 }
 
 .hero-lead {
@@ -151,8 +149,10 @@
   }
 
   .hero-brand {
-    font-size: clamp(1.55rem, 7.4vw, 2.35rem);
-    letter-spacing: 0.01em;
+    /* одна строка целиком, без висящей «C» */
+    white-space: nowrap;
+    font-size: min(6.8vw, 1.75rem);
+    letter-spacing: -0.01em;
   }
 
   .hero-lead {
