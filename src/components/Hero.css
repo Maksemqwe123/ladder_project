@@ -23,7 +23,6 @@
   object-position: center 40%;
   opacity: 0;
   transition: opacity 1.1s ease;
-  /* без scale — scale размывает картинку на весь экран */
   transform: none;
 }
 
@@ -48,24 +47,34 @@
   display: flex;
   align-items: center;
   justify-content: space-between;
+  gap: 1rem;
   width: var(--content);
+  max-width: 100%;
   margin-inline: auto;
-  padding: 1.25rem 0;
+  padding: 1rem 0;
   z-index: 2;
 }
 
 .hero-logo {
   display: inline-flex;
   align-items: center;
-  gap: 0.65rem;
+  gap: 0.55rem;
   font-family: var(--font-brand);
   font-weight: 700;
-  letter-spacing: 0.14em;
-  font-size: 0.82rem;
+  letter-spacing: 0.1em;
+  font-size: 0.78rem;
+  min-width: 0;
+}
+
+.hero-logo span {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
 }
 
 .hero-nav-link {
-  font-size: 0.92rem;
+  flex-shrink: 0;
+  font-size: 0.9rem;
   color: var(--text-muted);
   border-bottom: 1px solid transparent;
   transition: color 0.25s ease, border-color 0.25s ease;
@@ -78,37 +87,41 @@
 
 .hero-content {
   width: var(--content);
+  max-width: 100%;
   margin-inline: auto;
-  padding: 0 0 clamp(3.5rem, 9vh, 5.5rem);
-  max-width: 40rem;
-  justify-self: start;
+  padding: 0 0 clamp(2.75rem, 8vh, 5.5rem);
+  justify-self: stretch;
   position: relative;
   z-index: 1;
 }
 
 .hero-brand {
-  margin: 0 0 1rem;
+  margin: 0 0 0.85rem;
   font-family: var(--font-brand);
   font-weight: 800;
-  font-size: clamp(2.6rem, 9vw, 5.6rem);
-  letter-spacing: 0.04em;
-  line-height: 0.95;
+  /* 11 букв OPENWIDELLC — влезает на узкий экран */
+  font-size: clamp(1.7rem, 8.2vw, 5.6rem);
+  letter-spacing: 0.02em;
+  line-height: 0.98;
   color: var(--text);
-  text-wrap: balance;
+  max-width: 100%;
+  overflow-wrap: anywhere;
+  word-break: break-word;
 }
 
 .hero-lead {
-  margin: 0 0 1.75rem;
+  margin: 0 0 1.35rem;
   max-width: 22rem;
-  font-size: clamp(1.05rem, 2.4vw, 1.25rem);
+  font-size: clamp(0.98rem, 3.6vw, 1.25rem);
   color: var(--text-muted);
   font-weight: 300;
+  line-height: 1.4;
 }
 
 .hero-dots {
   display: flex;
   gap: 0.55rem;
-  margin-top: 1.75rem;
+  margin-top: 1.35rem;
 }
 
 .hero-dot {
@@ -128,12 +141,33 @@
 }
 
 @media (max-width: 640px) {
+  .hero {
+    min-height: 100svh;
+    min-height: 100dvh;
+  }
+
   .hero-content {
-    max-width: none;
+    padding-bottom: calc(1.5rem + env(safe-area-inset-bottom, 0px));
   }
 
   .hero-brand {
-    letter-spacing: 0.02em;
+    font-size: clamp(1.55rem, 7.4vw, 2.35rem);
+    letter-spacing: 0.01em;
+  }
+
+  .hero-lead {
+    max-width: none;
+    margin-bottom: 1.15rem;
+  }
+
+  .hero-slide {
+    object-position: 62% 40%;
+  }
+
+  .hero-shade {
+    background:
+      linear-gradient(180deg, rgba(8, 6, 5, 0.55) 0%, rgba(8, 6, 5, 0.28) 40%, rgba(8, 6, 5, 0.78) 70%, rgba(8, 6, 5, 0.95) 100%),
+      linear-gradient(90deg, rgba(8, 6, 5, 0.35) 0%, transparent 55%);
   }
 }
 
