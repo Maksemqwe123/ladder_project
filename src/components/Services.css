@@ -1,0 +1,33 @@
+.services-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 0;
+  border-top: 1px solid var(--bg-line);
+}
+
+.services-item {
+  display: grid;
+  grid-template-columns: minmax(8rem, 14rem) 1fr;
+  gap: 1.25rem 2rem;
+  padding: 1.6rem 0;
+  border-bottom: 1px solid var(--bg-line);
+}
+
+.services-item h3 {
+  font-size: 1.35rem;
+  color: var(--wood-bright);
+}
+
+.services-item p {
+  color: var(--text-muted);
+  max-width: 36rem;
+}
+
+@media (max-width: 640px) {
+  .services-item {
+    grid-template-columns: 1fr;
+    gap: 0.5rem;
+  }
+}
