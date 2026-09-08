@@ -75,13 +75,14 @@
 .hero-nav-link {
   flex-shrink: 0;
   font-size: 0.9rem;
-  color: var(--text-muted);
+  color: var(--wood-bright);
   border-bottom: 1px solid transparent;
   transition: color 0.25s ease, border-color 0.25s ease;
+  letter-spacing: 0.02em;
 }
 
 .hero-nav-link:hover {
-  color: var(--wood-bright);
+  color: var(--wood);
   border-color: var(--wood);
 }
 
@@ -142,6 +143,11 @@
   .hero {
     min-height: 100svh;
     min-height: 100dvh;
+  }
+
+  .hero-nav-link {
+    font-size: 0.78rem;
+    letter-spacing: 0;
   }
 
   .hero-content {

@@ -1,5 +1,9 @@
 export const INSTAGRAM_URL = "https://www.instagram.com/openwidellc/";
 export const THREADS_URL = "https://www.threads.net/@openwidellc";
+export const PHONE_DISPLAY = "+375 29 668-01-51";
+export const PHONE_HREF = "tel:+375296680151";
+export const EMAIL = "andreisadokhin@yandex.by";
+export const EMAIL_HREF = "mailto:andreisadokhin@yandex.by";
 
 export const heroSlides = [
   "/works/hero-1.jpg",
@@ -81,8 +85,8 @@ export const materials = [
 export const processSteps = [
   {
     step: "01",
-    title: "Заявка",
-    text: "Напишите в Instagram — обсудим задачу, стиль и ориентиры по срокам.",
+    title: "Звонок",
+    text: "Позвоните нам — так проще всего оформить заказ. Обсудим задачу и договоримся, когда перезвонить с деталями.",
   },
   {
     step: "02",
@@ -116,10 +120,10 @@ export const faqs = [
   },
   {
     q: "Сколько занимает изготовление?",
-    a: "Срок зависит от сложности и загрузки. Ориентиры по срокам согласуем после обсуждения проекта.",
+    a: "Срок зависит от сложности и загрузки. Ориентиры по срокам согласуем после звонка.",
   },
   {
     q: "Как оформить заказ?",
-    a: "Напишите нам в Instagram @openwidellc — начнём с консультации и фото/размеров помещения.",
+    a: "Самый простой способ — позвонить по номеру +375 29 668-01-51. Мы на связи и перезвоним, если нужно уточнить детали. Также можно написать на andreisadokhin@yandex.by.",
   },
 ] as const;

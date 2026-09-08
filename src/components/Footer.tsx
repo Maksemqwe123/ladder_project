@@ -1,4 +1,10 @@
-import { INSTAGRAM_URL, THREADS_URL } from "../data/site";
+import {
+  EMAIL,
+  EMAIL_HREF,
+  INSTAGRAM_URL,
+  PHONE_DISPLAY,
+  PHONE_HREF,
+} from "../data/site";
 import { useReveal } from "../hooks/useReveal";
 import "./Footer.css";
 
@@ -11,14 +17,15 @@ export function Footer() {
         <div className="footer-main reveal">
           <p className="footer-brand">OPENWIDELLC</p>
           <p className="footer-lead">
-            Изготовление и монтаж лестниц из массива. Минская и Гомельская области.
+            Хотите заказать лестницу? Позвоните — так быстрее всего. Мы на связи и
+            перезвоним, если нужно уточнить детали.
           </p>
           <div className="cta-row">
-            <a className="btn btn-primary" href={INSTAGRAM_URL} target="_blank" rel="noreferrer">
-              Написать в Instagram
+            <a className="btn btn-primary" href={PHONE_HREF}>
+              Позвонить {PHONE_DISPLAY}
             </a>
-            <a className="btn btn-ghost" href={THREADS_URL} target="_blank" rel="noreferrer">
-              Threads
+            <a className="btn btn-ghost" href={EMAIL_HREF}>
+              Написать на почту
             </a>
           </div>
         </div>
@@ -26,11 +33,16 @@ export function Footer() {
         <div className="footer-meta reveal reveal-delay-1">
           <p>📍 Минская и Гомельская области</p>
           <p>
+            <a href={PHONE_HREF}>{PHONE_DISPLAY}</a>
+          </p>
+          <p>
+            <a href={EMAIL_HREF}>{EMAIL}</a>
+          </p>
+          <p>
             <a href={INSTAGRAM_URL} target="_blank" rel="noreferrer">
-              @openwidellc
+              Instagram @openwidellc
             </a>
           </p>
-          <p className="footer-tag">#openwidellc</p>
         </div>
       </div>
       <div className="footer-bottom">

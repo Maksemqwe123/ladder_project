@@ -13,7 +13,7 @@ export function Faq() {
         <div className="section-head reveal">
           <span className="eyebrow">F.A.Q.</span>
           <h2>Ваши вопросы</h2>
-          <p>Короткие ответы перед тем, как написать нам в Instagram.</p>
+          <p>Короткие ответы. Чтобы оформить заказ — проще всего позвонить.</p>
         </div>
 
         <div className="faq-list">

@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { INSTAGRAM_URL, heroSlides } from "../data/site";
+import { heroSlides, PHONE_DISPLAY, PHONE_HREF } from "../data/site";
 import "./Hero.css";
 
 export function Hero() {
@@ -46,8 +46,8 @@ export function Hero() {
           <img src="/brand/mark.svg" alt="" width={28} height={28} />
           <span>OPENWIDELLC</span>
         </a>
-        <a className="hero-nav-link" href={INSTAGRAM_URL} target="_blank" rel="noreferrer">
-          Instagram
+        <a className="hero-nav-link" href={PHONE_HREF}>
+          {PHONE_DISPLAY}
         </a>
       </nav>
 
@@ -55,19 +55,15 @@ export function Hero() {
         <p className="hero-brand reveal">OPENWIDELLC</p>
         <h1 className="sr-only">Open Wide LLC — лестницы из массива</h1>
         <p className="hero-lead reveal reveal-delay-1">
-          Изготовление и монтаж лестниц из массива
+          Изготовление и монтаж лестниц из массива. Самый простой способ заказать —
+          позвонить.
         </p>
         <div className="cta-row reveal reveal-delay-2">
-          <a className="btn btn-primary" href="#works">
-            Смотреть работы
+          <a className="btn btn-primary" href={PHONE_HREF}>
+            Позвонить
           </a>
-          <a
-            className="btn btn-ghost"
-            href={INSTAGRAM_URL}
-            target="_blank"
-            rel="noreferrer"
-          >
-            Написать в Instagram
+          <a className="btn btn-ghost" href="#works">
+            Смотреть работы
           </a>
         </div>
 
